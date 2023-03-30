@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'package:ai_flashcards/config/env.dart';
+import 'package:flex_color_scheme/flex_color_scheme.dart';
 import 'package:http/http.dart' as http;
 
 import 'package:flutter/material.dart';
@@ -15,8 +16,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+      theme: FlexThemeData.light(
+        scheme: FlexScheme.deepBlue,
+        appBarStyle: FlexAppBarStyle.primary,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: const MyHomePage(title: 'AI Flashcards'),
     );
